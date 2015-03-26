@@ -10,7 +10,7 @@
 //-- No direct access
 defined('_JEXEC') || die('=;)');
 JHtml::_('jquery.framework');
-JHtml::stylesheet(Juri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.min.css');
+JHtml::stylesheet(Juri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.min.css'); 
 JHtml::script(Juri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.jquery.min.js');
 $html = file_get_html('https://www.google.com/finance/converter');
 ?>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0">
+  <name>Hoicoi Google Currency</name>
+  <creationDate>26-Mar-2015</creationDate>
+  <author>Jibon Costa</author>
+  <authorEmail>jiboncosta57@gmail.com</authorEmail>
+  <authorUrl>http://extensions.hoicoimasti.com/</authorUrl>
+  <copyright/>
+  <license>GPL 2 or later</license>
+  <version>1.0</version>
+  <description>Convert Currency using Google Currency Coveter</description>
+  <files folder="site">
+    <folder>tmpl</folder>
+    <filename>simple_html_dom.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_hoicoigooglecurrency">mod_hoicoigooglecurrency.php</filename>
+  </files>
+  <params/>
+  <config/>
+</extension>

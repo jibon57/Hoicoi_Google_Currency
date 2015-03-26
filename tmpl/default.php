@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    HoicoiGoogleCurrency
- * @subpackage G:
+ * @subpackage default
  * @author     Jibon Costa {@link http://extensions.hoicoimasti.com/}
  * @author     Created on 26-Mar-2015
  * @license    GNU/GPL
@@ -41,7 +41,7 @@ $html = file_get_html('https://www.google.com/finance/converter');
 	});
 </script>
 
-<div id ="google_currency">
+<div id ="google_currency" style="width: 200px;">
   <div class="form-group">
   <label for="Amount">Amount: </label>
     <input type="text" size="5" maxlength="12" class="form-control" value="1" id="amount" placeholder="Amount" name="amount">
@@ -55,7 +55,7 @@ $html = file_get_html('https://www.google.com/finance/converter');
 		?>
 	</select>
   </div>
-  <p style="text-align: center;">TO</p>
+  <p style="text-align: center; margin: 0px;">TO</p>
   <div class="form-group">
 	<select class="form-control" name="to">
 		<?php

@@ -10,6 +10,8 @@
 //-- No direct access
 defined('_JEXEC') || die('=;)');
 JHtml::_('jquery.framework');
+JHtml::stylesheet(JUri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.min.css');
+JHtml::script(JUri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.jquery.min.js');
 $html = file_get_html('https://www.google.com/finance/converter');
 ?>
 <script type="text/javascript">
@@ -33,6 +35,9 @@ $html = file_get_html('https://www.google.com/finance/converter');
 					}
 				});
 		});
+		jQuery("select[name= from]").chosen({no_results_text: "Oops, nothing found!"}); 
+		jQuery("select[name= to]").chosen({no_results_text: "Oops, nothing found!"});
+
 	});
 </script>
 

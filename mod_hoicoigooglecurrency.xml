@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.0">
+<extension type="module" version="3.0" method="upgrade">
   <name>Hoicoi Google Currency</name>
   <creationDate>26-Mar-2015</creationDate>
   <author>Jibon Costa</author>

@@ -20,7 +20,7 @@ $html = file_get_html('https://www.google.com/finance/converter');
 			var amount = jQuery('#google_currency input[name= amount]').val();
 			var from = jQuery('#google_currency select[name= from]').val();
 			var to = jQuery('#google_currency select[name= to]').val();
-			jQuery('#google_currency p#result').html("loading....");
+			jQuery('#google_currency p#result').html("<img src='<?php echo Juri::base(); ?>modules/mod_hoicoigooglecurrency/assets/loading.gif' alt='loading'>");
 			jQuery.ajax({
 					method: "GET",
 					url: "<?php echo Juri::base(); ?>modules/mod_hoicoigooglecurrency/helper.php?convert=yes&amount="+amount+"&from="+from+"&to="+to					

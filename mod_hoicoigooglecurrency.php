@@ -8,6 +8,8 @@
 
 //-- No direct access
 defined('_JEXEC') || die('=;)');
-require_once dirname(__FILE__).'/simple_html_dom.php';
+if (!function_exists('file_get_html') && !class_exists('simple_html_dom')){
+	require_once dirname(__FILE__).'/simple_html_dom.php';
+}
 //-- Include the template for display
 require JModuleHelper::getLayoutPath('mod_hoicoigooglecurrency');

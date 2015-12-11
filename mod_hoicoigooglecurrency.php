@@ -11,5 +11,6 @@ defined('_JEXEC') || die('=;)');
 if (!function_exists('file_get_html') && !class_exists('simple_html_dom')){
 	require_once dirname(__FILE__).'/simple_html_dom.php';
 }
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 //-- Include the template for display
 require JModuleHelper::getLayoutPath('mod_hoicoigooglecurrency');

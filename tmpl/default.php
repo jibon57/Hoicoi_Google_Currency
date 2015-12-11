@@ -15,7 +15,7 @@ JHtml::script(Juri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.jque
 $html = file_get_html('https://www.google.com/finance/converter');
 ?>
 <script type="text/javascript">
-	jQuery("document").ready(function(){
+	jQuery("document").ready(function($){
 		jQuery("#google_currency #convert").click(function() {
 			var amount = jQuery('#google_currency input[name= amount]').val();
 			var from = jQuery('#google_currency select[name= from]').val();
@@ -35,16 +35,17 @@ $html = file_get_html('https://www.google.com/finance/converter');
 					}
 				});
 		});
+		jQuery("select[name= from] option[value='<?php echo $params->get('from', 'USD')?>']").attr("selected","selected");
+		jQuery("select[name= to] option[value='<?php echo $params->get('to', 'BDT')?>']").attr("selected","selected");
 		jQuery("select[name= from]").chosen({no_results_text: "Oops, nothing found!"}); 
 		jQuery("select[name= to]").chosen({no_results_text: "Oops, nothing found!"});
-
 	});
 </script>
 
-<div id ="google_currency" style="width: 200px;">
+<div id ="google_currency" class="google_currency<?php echo $moduleclass_sfx ?>">
   <div class="form-group">
   <label for="Amount">Amount: </label>
-    <input type="text" size="5" maxlength="12" class="form-control" value="1" id="amount" placeholder="Amount" name="amount">
+    <input type="text" size="5" maxlength="12" class="form-control" value="<?php echo $params->get('amount', '1')?>" id="amount" placeholder="Amount" name="amount">
   </div>
   <div class="form-group">
  	<select class="form-control" name="from">

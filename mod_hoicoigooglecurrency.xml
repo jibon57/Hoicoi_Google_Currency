@@ -7,7 +7,7 @@
   <authorUrl>http://extensions.hoicoimasti.com/</authorUrl>
   <copyright/>
   <license>GPL 2 or later</license>
-  <version>1.0</version>
+  <version>1.5</version>
   <description>Convert Currency using Google Currency Coveter</description>
   <files folder="site">
     <folder>assets</folder>
@@ -17,6 +17,37 @@
     <filename>index.html</filename>
     <filename module="mod_hoicoigooglecurrency">mod_hoicoigooglecurrency.php</filename>
   </files>
-  <params/>
-  <config/>
+  <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="amount"
+					type="text"
+					default="1"
+					label="Default amount"
+					description="Default amount" />
+					
+				<field
+					name="from"
+					type="text"
+					default="USD"
+					label="Default From"
+					description="Default currency from" />
+				
+				<field
+					name="to"
+					type="text"
+					default="BDT"
+					label="Default to"
+					description="Default currency to" />
+				
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					
+			</fieldset>
+		</fields>
+	</config>
 </extension>

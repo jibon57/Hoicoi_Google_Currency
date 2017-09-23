@@ -12,7 +12,22 @@ defined('_JEXEC') || die('=;)');
 JHtml::_('jquery.framework');
 JHtml::stylesheet(Juri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.min.css'); 
 JHtml::script(Juri::base() .'modules/mod_hoicoigooglecurrency/assets/chosen.jquery.min.js');
-$html = file_get_html('https://finance.google.com/finance/converter');
+
+$cache = JFactory::getCache('mod_hoicoigooglecurrency', '');
+$cache->setCaching(true);
+$cache->setLifeTime(864000);  //24 hours
+$cache_id = 'hoicoigooglecurrency';
+$cached_page= $cache->get($cache_id);
+$html = $cached_page;
+//echo "html".$html;
+if(empty($html)){
+	$html = file_get_html('https://finance.google.com/finance/converter');
+	if(!preg_match("/302/", $html)){
+		//echo "Yes".$html;
+		$cache->store($html, $cache_id);
+	}
+}
+
 ?>
 <script type="text/javascript">
 	jQuery("document").ready(function($){

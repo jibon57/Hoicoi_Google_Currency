@@ -23,7 +23,6 @@ $html = $cached_page;
 if(empty($html)){
 	$html = file_get_html('https://finance.google.com/finance/converter');
 	if(!preg_match("/302/", $html)){
-		//echo "Yes".$html;
 		$cache->store($html, $cache_id);
 	}
 }

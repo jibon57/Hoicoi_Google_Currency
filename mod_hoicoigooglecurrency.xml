@@ -7,7 +7,7 @@
   <authorUrl>http://extensions.hoicoimasti.com/</authorUrl>
   <copyright/>
   <license>GPL 2 or later</license>
-  <version>1.5</version>
+  <version>1.6</version>
   <description>Convert Currency using Google Currency Coveter</description>
   <files folder="site">
     <folder>assets</folder>
